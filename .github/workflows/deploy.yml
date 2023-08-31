@@ -43,6 +43,11 @@ jobs:
           image: $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
           environment-variables: "LOG_LEVEL=info"
 
+      - name: Debug Task Definition
+        run: |
+          echo "Task Definition Contents:"
+          cat ${{ steps.render-web-container.outputs.task-definition }}
+
       - name: Deploy to Amazon ECS service
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
         with:
