@@ -3,7 +3,7 @@
     "containerDefinitions": [
         {
             "name": "docker-container",
-            "image": "685852568147.dkr.ecr.us-east-1.amazonaws.com/cicddocker",
+            "image": "685852568147.dkr.ecr.us-east-1.amazonaws.com/cicddocker:sample_docker_image",
             "cpu": 0,
             "portMappings": [
                 {
