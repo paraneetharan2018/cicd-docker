@@ -1,10 +1,11 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:685852568147:task-definition/github-docker:1",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:685852568147:task-definition/dockertaskdefinition:1",
     "containerDefinitions": [
         {
             "name": "docker-container",
             "image": "685852568147.dkr.ecr.us-east-1.amazonaws.com/cicddocker",
-            "cpu": 0,
+            "cpu": 2048,
+            "memory": 8192,
             "portMappings": [
                 {
                     "name": "docker-container-80-tcp",
@@ -24,7 +25,7 @@
                 "logDriver": "awslogs",
                 "options": {
                     "awslogs-create-group": "true",
-                    "awslogs-group": "/ecs/github-docker",
+                    "awslogs-group": "/ecs/dockertaskdefinition",
                     "awslogs-region": "us-east-1",
                     "awslogs-stream-prefix": "ecs"
                 },
@@ -32,8 +33,7 @@
             }
         }
     ],
-    "family": "github-docker",
-    "taskRoleArn": "arn:aws:iam::685852568147:role/ecsTaskExecutionRole",
+    "family": "dockertaskdefinition",
     "executionRoleArn": "arn:aws:iam::685852568147:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
     "revision": 1,
@@ -51,9 +51,6 @@
         },
         {
             "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
-        },
-        {
-            "name": "com.amazonaws.ecs.capability.task-iam-role"
         },
         {
             "name": "ecs.capability.execution-role-ecr-pull"
@@ -76,13 +73,13 @@
     "requiresCompatibilities": [
         "FARGATE"
     ],
-    "cpu": "1024",
-    "memory": "5120",
+    "cpu": "2048",
+    "memory": "8192",
     "runtimePlatform": {
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2023-08-31T21:24:27.082Z",
+    "registeredAt": "2023-08-31T23:55:33.150Z",
     "registeredBy": "arn:aws:iam::685852568147:root",
     "tags": []
 }
