@@ -1,9 +1,9 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:685852568147:task-definition/dockertaskdefinition:1",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:685852568147:task-definition/dockertaskdefinition:2",
     "containerDefinitions": [
         {
             "name": "docker-container",
-            "image": "685852568147.dkr.ecr.us-east-1.amazonaws.com/cicddocker",
+            "image": "685852568147.dkr.ecr.us-east-1.amazonaws.com/cicddocker:sample_docker_image",
             "cpu": 2048,
             "memory": 8192,
             "portMappings": [
@@ -36,7 +36,7 @@
     "family": "dockertaskdefinition",
     "executionRoleArn": "arn:aws:iam::685852568147:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 1,
+    "revision": 2,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -79,7 +79,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2023-08-31T23:55:33.150Z",
+    "registeredAt": "2023-09-01T00:14:45.579Z",
     "registeredBy": "arn:aws:iam::685852568147:root",
     "tags": []
 }
